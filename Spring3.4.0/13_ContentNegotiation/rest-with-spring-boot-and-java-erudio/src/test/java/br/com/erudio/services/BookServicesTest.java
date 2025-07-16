@@ -99,7 +99,6 @@ class BookServicesTest {
 
         BookDTO dto = input.mockDTO(1);
 
-        System.out.println("WHEN...");
         when(repository.save(book)).thenReturn(persisted);
 
         var result = service.create(dto);
