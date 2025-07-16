@@ -11,6 +11,8 @@ public class ObjectMapper {
     private static Mapper mapper = DozerBeanMapperBuilder.buildDefault();
 
     public static <O, D> D parseObject(O origin, Class<D> destination) {
+        System.out.print("Source object is null? ");
+        System.out.println(origin == null);
         return mapper.map(origin, destination);
     }
 
